@@ -1,0 +1,234 @@
+Source: xorg
+Section: gui
+Priority: optional
+Maintainer: Yauhen Kharuzhy <jekhor@gmail.com>
+Standards-Version: 3.7.3.0
+Build-Depends: dpkg (>= 1.7.0), po-debconf, debhelper (>= 4.1.16)
+XCS-Cross-Host-Build-Depends: dpkg (>= 1.7.0), po-debconf, debhelper (>= 4.1.16)
+
+Package: x11-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, debianutils (>= 1.13), lsb-base (>= 1.3-9ubuntu2)
+Pre-Depends: debconf | debconf-2.0
+Conflicts: xfree86-common, xorg-common, xserver-common, x-common,
+ xserver-xorg (<< 1:7.0.12), xserver-xfree86 (<< 1:7.0),
+ libxft-dev (<= 2.1.8.2-5),  aee (<= 2.2.15b-1), ascd (<= 0.13.2-3),
+ bibview (<= 2.2-8), fvwm1 (<= 1.24r-46), grace (<= 1:5.1.18-1),
+ groff (<= 1.18.1.1-7), hfsutils-tcltk (<= 3.2.6-7), login.app (<= 1.2.1-18),
+ oneko (<= 1.2.sakura.6-1), procmeter (<= 2.5.1-11), propsel (<= 971130-5.3),
+ regexplorer (<= 0.1.6-12), tkseti (<= 3.06-1), wdm (<= 1.28-1),
+ wily (<= 0.13.41-6), wmnetselect (<= 0.85-5.5), wmsensors (<= 1.0.4-3.4),
+ wmtv (<= 0.6.5-15), xbanner (<= 1.31-23), xcolors (<= 1.5a-2),
+ xcolorsel (<= 1.1a-11), xezmlm (<= 1.0.3-11), xfs-xtt (<= 1:1.4.1.xf430-6),
+ xgdipc (<= 1.2-0.3), xgmod (<= 3.1-9), xgraph (<= 12.1-3),
+ xlogmaster (<= 1.6.0-8), xmailbox (<= 2.5-9), xmem (<= 1.20-19),
+ xnecview (<= 1.34-2), xodo (<= 1.2-9.2), xturqstat (<= 2.2.2sarge1),
+ xwit (<= 3.4-6), lbxproxy (<< 7.0), proxymngr (<< 7.0), twm (<< 7.0),
+ xbase-clients (<< 1:7.0), xdm (<= 1:1.0.1-6), xfs (<< 1:1.0), xfwp (<< 7.0),
+ xutils (<< 1:7.0), xvfb (<< 1:1.0), qcam (<= 0.91-11.1), twlog (<= 1.3-4),
+ xdmx (<< 1:1.0), bugsx (<= 1.08-8), buici-clock (<= 0.4.5+b1),
+ ctwm (<= 3.7-2), emelfm (<= 0.9.2-7), fte-xwindow (<= 0.50.0-1.3),
+ fvwm95 (<= 2.0.43ba-23+b1), gerstensaft (<= 0.2-5.1), gipsc (<= 0.4.3-2),
+ gradio (<= 1.0.1-6), hanterm-classic (<= 3.1.6.0-4),
+ hanterm-xf (<= 1:3.3.1p18-9.2), ibp (<= 0.21-4),
+ isdnutils-xtools (<= 1:3.8.2005-12-06-4), ivtools-bin (<= 1.1.3-5),
+ kdrill (<= 6.4-2.1), kinput2-canna (<= 3.1-7), kinput2-canna-wnn (<= 3.1-7),
+ kinput2-wnn (<= 3.1-7), kterm (<= 6.2.0-45), lm-batmon (<= 0.96-3),
+ lwm (<= 1.2.1-1), mctools-lite (<= 970129-16), mgp (<= 1.11b-6),
+ olvwm (<= 4.4.3.2p1.4-21), olwm (<= 3.2p1.4-21), pixmap (<= 2.6pl4-14.1),
+ plotmtv (<= 1.4.4t-8.1), ppxp-x11 (<= 0.2001080415-14), seyon (<= 2.20c-20),
+ skkinput (<= 1:2.06.4-4), tkdesk (<= 2.0-5), videogen (<= 0.32-1),
+ vtwm (<= 5.4.7-2), w9wm (<= 0.4.2-4), wmavgload (<= 0.7.0-6.1),
+ wmcpu (<= 1.3-4.1), wmdate (<= 0.5-7.1), wmnet (<= 1.05-12),
+ wmscope (<= 3.0-9.1), xautolock (<= 1:2.1-6), xbatt (<= 1.2.1-4),
+ xbattbar (<= 1.4.2-3.1), xcal (<= 4.1-18.2),
+ xcalendar-i18n (<= 4.0.0.i18p1-13.1), xcb (<= 2.4-4), xclip (<= 0.08-5),
+ xclips (<= 6.21-6), xdkcal (<= 0.9d-2.1), xdu (<= 3.0-14),
+ xengine (<= 1.11-9), xfaces (<= 3.3-25), xfishtank (<= 2.2-23.1),
+ xfm (<= 1.4.3-8), xinput (<= 1.2-5.2), xipmsg (<= 0.8088-1.1),
+ xlbiff (<< 4.1-4), xli (<= 1.17.0-21), xlockmore (<= 1:5.21-1),
+ xlockmore-gl (<= 1:5.21-1), xmeter (<= 1.15-6), xmix (<= 2.1-5),
+ xmon (<= 1.5.6-1.3), xpostit (<= 3.3.1-8.2), xprint (<= 1:0.1.0.alpha1-13),
+ xrn (<= 9.02-7.1), xsysinfo (<= 1.7-2), xtel (<= 3.3.0-5.4),
+ xtoolwait (<= 1.3-6), xtrlock (<= 2.0-11), xview-clients (<= 3.2p1.4-21),
+ xviewg (<= 3.2p1.4-21), xviewg-dev (<= 3.2p1.4-21), xvkbd (<= 2.6-2.1),
+ xxkb (<= 1.10-2.1), xzoom (<= 0.3-17), pgaccess (<= 1:0.98.8.20030520-2),
+ xearth (<= 1.1-10.2), libmotif-dev (<= 2.2.3-1.3),
+ motif-clients (<= 2.2.3-1.3), xslideshow (<= 3.1-8.1), xtrkcad (<= 3.1.4-1),
+ pmud (<= 0.10-9), xnest (<< 1:1.0), xterm (<< 208-1), xmh (<= 6.8.2.dfsg.1-4),
+ beaver (<= 0.2.5-2), lsb-core (<= 3.1-4), yank (<=0.2.1-7.2),
+ xpmumon (<= 1.3.0), ivtools-dev (<= 1.1.3-5), ppxp (<= 0.2001080415-14),
+ guitar (<= 0.1.4-11), xftp, xext, xpaste, ghostview, xv (<= 3.10a-26),
+ xserver-xfree86-dbg, grace6 (<= 5.99.0+final-4), xephem (<= 3.4-5),
+ opera (<< 9.10-20060616), hamsoft (<< 0.2.3-1), phototk, tkworld,
+ ucbmpeg-play (<< 2.3p-13), netscape-base-4, communicator-smotif-477, epan,
+ navigator-smotif-477, stella (<< 2.2-1), xfractint (<< 20.3.01-1), xgobi,
+ xpostitplus, xisp, vide (<= 1.21-3)
+Replaces: xfree86-common, xorg-common, xserver-common, x-common
+Description: X Window System (X.Org) infrastructure
+ x11-common contains the filesystem infrastructure required for further
+ installation of the X Window System in any configuration; it does not
+ provide a full installation of clients, servers, libraries, and utilities
+ required to run the X Window System.
+ .
+ A number of terms are used to refer to the X Window System, including "X",
+ "X Version 11", "X11", "X11R6", and "X11R7".  The version of X used in
+ Debian is derived from the version released by the X.Org Foundation, and
+ is thus often also referred to as "X.Org".  All of the preceding quoted
+ terms are functionally interchangeable in an Debian system.
+
+#Package: xserver-xorg
+#Architecture: all
+#Conflicts: xserver-xfree86 (<< 6.8.2.dfsg.1-1), xserver-common
+#Replaces: xserver-common
+#Pre-Depends: x11-common (>= 1:7.3+3)
+#Depends: xserver-xorg-core (>= 2:1.4-3), xserver-xorg-video-all | xserver-xorg-video-2, xserver-xorg-input-all | xserver-xorg-input-2, ${misc:Depends}, xkb-data | xkb-data-legacy, x11-xkb-utils
+#Recommends: libgl1-mesa-dri, udev, ${F:XServer-Xorg-Detect-Depends}
+#Description: the X.Org X server
+# This package depends on the full suite of the server and drivers for the
+# X.Org X server, as well as providing a configuration infrastructure to manage
+# xorg.conf.  It does not provide the actual server itself, but removing it
+# is strongly discouraged.
+#
+#Package: xserver-xorg-video-all
+#Architecture: any
+#Depends: ${F:XServer-Xorg-Video-Depends}
+#Replaces: xserver-xorg-driver-all
+#Conflicts: xserver-xorg-driver-all
+#Description: the X.Org X server -- output driver metapackage
+# This package depends on the full suite of output drivers for the X.Org X server
+# (Xorg).  It does not provide any drivers itself, and may be removed if you wish
+# to only have certain drivers installed.
+
+#Package: xserver-xorg-input-all
+#Architecture: any
+#Depends: ${F:XServer-Xorg-Input-Depends}
+#Description: the X.Org X server -- input driver metapackage
+# This package depends on the full suite of input drivers for the X.Org X server
+# (Xorg).  It does not provide any drivers itself, and may be removed if you wish
+# to only have certain drivers installed.
+#
+#Package: xorg
+#Architecture: any
+#Depends: xserver-xorg, libgl1-mesa-glx | libgl1, libglu1-mesa, xfonts-base (>= 1:1.0.0-1), xfonts-100dpi (>= 1:1.0.0-1), xfonts-75dpi (>= 1:1.0.0-1), xfonts-scalable (>= 1:1.0.0-1), x11-apps, x11-session-utils, x11-utils, x11-xfs-utils, x11-xkb-utils, x11-xserver-utils, xauth, xinit, xfonts-utils, xkb-data, xterm | x-terminal-emulator, sparc-utils [sparc]
+#Recommends: xorg-docs
+#Provides: x-window-system, x-window-system-core
+#Description: X.Org X Window System
+# This metapackage provides the components for a standalone
+# workstation running the X Window System.  It provides the X libraries, an X
+# server, a set of fonts, and a group of basic X clients and utilities.
+# .
+# Higher level metapackages, such as those for desktop environments, can
+# depend on this package and simplify their dependencies.
+# .
+# It should be noted that a package providing x-window-manager should also
+# be installed to ensure a comfortable X experience.
+#
+#Package: xorg-dev
+#Architecture: all
+#Depends: libdmx-dev, libfontenc-dev, libfs-dev, libice-dev, libsm-dev, libx11-dev, libxau-dev, libxaw7-dev, libxcomposite-dev, libxcursor-dev, libxdamage-dev, libxdmcp-dev, libxevie-dev, libxext-dev, libxfixes-dev, libxfont-dev, libxft-dev, libxi-dev, libxinerama-dev, libxkbfile-dev, libxkbui-dev, libxmu-dev, libxmuu-dev, libxpm-dev, libxrandr-dev, libxrender-dev, libxres-dev, libxss-dev, libxt-dev, libxtrap-dev, libxtst-dev, libxv-dev, libxvmc-dev, libxxf86dga-dev, libxxf86misc-dev, libxxf86vm-dev, x11proto-bigreqs-dev, x11proto-composite-dev, x11proto-core-dev, x11proto-damage-dev, x11proto-dmx-dev, x11proto-evie-dev, x11proto-fixes-dev, x11proto-fontcache-dev, x11proto-fonts-dev, x11proto-gl-dev, x11proto-input-dev, x11proto-kb-dev, x11proto-randr-dev, x11proto-record-dev, x11proto-render-dev, x11proto-resource-dev, x11proto-scrnsaver-dev, x11proto-trap-dev, x11proto-video-dev, x11proto-xcmisc-dev, x11proto-xext-dev, x11proto-xf86bigfont-dev, x11proto-xf86dga-dev, x11proto-xf86dri-dev, x11proto-xf86misc-dev, x11proto-xf86vidmode-dev, x11proto-xinerama-dev, xserver-xorg-dev, xtrans-dev
+#Description: the X.Org X Window System development libraries
+# This metapackage provides the development libraries for the X.Org X Window
+# System.
+# .
+# X Window System design documentation, manual pages, library reference
+# works, unstripped and static versions of the shared libraries, C header
+# files, and special versions of libraries available only in static form
+# (with and without PIC symbols included) are supplied by the packages
+# depended on by this metapackage.
+# .
+# Note that this is a convenience package for users and is not a package for
+# Debian developers to have their package depend on.
+#
+#Package: xlibs-data
+#Architecture: all
+#Section: libs
+#Depends: xbitmaps, xcursor-themes, libx11-6 (>= 2:1.0.0-2)
+#Description: transitional package for X11 client data
+# This package is provided to ease upgrades from Debian 3.1 ("sarge"). It
+# may be safely removed from your system.
+#
+#Package: xlibs-static-dev
+#Architecture: all
+#Section: oldlibs
+#Depends: libxfont-dev, libfontenc-dev
+#Description: transitional metapackage
+# This package depends on the individual libraries that used to be contained
+# within the package of this name. These libraries used to be static
+# libraries, but have since become shared libraries with their own packages
+# and can be depended on by themselves. This package is for transitional
+# purposes to prevent disruptions during automated package builds, and my be
+# safely removed from your system.
+#
+#Package: xlibmesa-gl
+#Section: libs
+#Architecture: all
+#Depends: libgl1-mesa-glx
+#Description: transitional package for Debian etch
+# This package is provided to smooth upgrades from Debian 3.1 ("sarge") to
+# Debian etch. It may be safely removed from your system.
+#
+#Package: xlibmesa-gl-dev
+#Section: libdevel
+#Architecture: all
+#Depends: libgl1-mesa-dev
+#Description: transitional package for Debian etch
+# This package is provided to smooth upgrades from Debian 3.1 ("sarge") to
+# Debian etch. It may be safely removed from your system.
+#
+#Package: xlibmesa-glu
+#Section: libdevel
+#Architecture: all
+#Depends: libglu1-mesa
+#Description: transitional package for Debian etch
+# This package is provided to smooth upgrades from Debian 3.1 ("sarge") to
+# Debian etch. It may be safely removed from your system.
+#
+#Package: libglu1-xorg
+#Section: libs
+#Architecture: all
+#Depends: libglu1-mesa
+#Description: transitional package for Debian etch
+# This package is provided to smooth upgrades from Debian 3.1 ("sarge") to
+# Debian etch. It may be safely removed from your system.
+# 
+#Package: libglu1-xorg-dev
+#Section: libdevel
+#Architecture: all
+#Depends: libglu1-mesa-dev
+#Description: transitional package for Debian etch
+# This package is provided to smooth upgrades from Debian 3.1 ("sarge") to
+# Debian etch. It may be safely removed from your system.
+#
+#Package: xbase-clients
+#Section: x11
+#Architecture: all
+#Depends: x11-apps, x11-session-utils, x11-utils, x11-xfs-utils, x11-xkb-utils,
+# x11-xserver-utils, xauth, xinit
+#Description: miscellaneous X clients - metapackage
+# An X client is a program that interfaces with an X server (almost always via
+# the X libraries), and thus with some input and output hardware like a
+# graphics card, monitor, keyboard, and pointing device (such as a mouse).
+# .
+# This package provides a miscellaneous assortment of several dozen X clients
+# that ship with the X Window System.
+# .
+# This package is provided for transition from earlier Debian releases, the
+# programs formerly in xutils and xbase-clients having been split out in smaller
+# packages.
+#
+#Package: xutils
+#Section: x11
+#Architecture: all
+#Depends: x11-xfs-utils, x11-utils, x11-xserver-utils, x11-session-utils, xfonts-utils, xutils-dev
+#Description: X Window System utility programs metapackage
+# xutils provides a set of utility programs shipped with the X Window System.
+# Many of these programs are useful even on a system that does not have any X
+# clients or X servers installed.
+# .
+# This package is provided for transition from earlier Debian releases, the
+# programs formerly in xutils and xbase-clients having been split out in smaller
+# packages.
+#
+#
+#
