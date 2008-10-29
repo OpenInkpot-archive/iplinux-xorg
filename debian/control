@@ -3,8 +3,8 @@ Section: gui
 Priority: optional
 Maintainer: Yauhen Kharuzhy <jekhor@gmail.com>
 Standards-Version: 3.7.3.0
-Build-Depends: dpkg (>= 1.7.0), po-debconf, debhelper (>= 4.1.16)
-XCS-Cross-Host-Build-Depends: dpkg (>= 1.7.0), po-debconf, debhelper (>= 4.1.16)
+Build-Depends: dpkg (>= 1.7.0), debhelper (>= 4.1.16)
+XCS-Cross-Host-Build-Depends: dpkg (>= 1.7.0), debhelper (>= 4.1.16)
 
 Package: x11-common
 Architecture: any
