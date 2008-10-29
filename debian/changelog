@@ -1,3 +1,9 @@
+xorg (1:7.3+10.oi2) asimov; urgency=low
+
+  * Remove debconf from depends
+
+ -- Yauhen Kharuzhy <jekhor@gmail.com>  Wed, 29 Oct 2008 10:57:08 +0000
+
 xorg (1:7.3+10.oi1) unstable; urgency=low
 
   * OI port
