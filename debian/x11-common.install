@@ -1,3 +1,2 @@
-debian/local/dexconf usr/bin
 debian/local/rgb.txt etc/X11
 debian/local/Xresources/x11-common etc/X11/Xresources
