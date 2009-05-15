@@ -1,3 +1,9 @@
+xorg (1:7.3+11) asimov; urgency=low
+
+  * x11-common reintroduced with IPlinux-specific Xsession.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Fri, 15 May 2009 21:29:14 +0700
+
 xorg (1:7.3+10.zz.ip1) asimov; urgency=low
 
   * First build for IPlinux.

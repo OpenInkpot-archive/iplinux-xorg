@@ -3,11 +3,11 @@ Section: gui
 Priority: optional
 Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
 Standards-Version: 3.8.0
-Build-Depends: dpkg (>= 1.7.0), debhelper (>= 4.1.16)
-XCS-Cross-Host-Build-Depends: dpkg (>= 1.7.0), debhelper (>= 4.1.16)
+Build-Depends: debhelper (>= 7)
+XCS-Cross-Host-Build-Depends: debhelper (>= 7)
 
 Package: x11-common
-Architecture: any
+Architecture: all
 Depends:
 Description: X Window System (X.Org) infrastructure
  x11-common contains the filesystem infrastructure required for further
