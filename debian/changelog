@@ -1,3 +1,9 @@
+xorg (1:7.3+12) asimov; urgency=low
+
+  * Added /etc/X11/Xsession.d/15locale.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Tue, 26 May 2009 02:47:29 +0700
+
 xorg (1:7.3+11) asimov; urgency=low
 
   * x11-common reintroduced with IPlinux-specific Xsession.
