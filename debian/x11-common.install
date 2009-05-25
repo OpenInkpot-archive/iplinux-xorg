@@ -1,1 +1,2 @@
 debian/local/Xsession etc/X11
+debian/local/15locale etc/X11/Xsession.d

@@ -1,0 +1,9 @@
+#!/bin/sh
+# This file is sourced by Xsession.
+
+if [ -e /etc/default/locale ]; then
+    . /etc/default/locale
+fi
+if [ -e $HOME/.locale ]; then
+    . $HOME/.locale
+fi
