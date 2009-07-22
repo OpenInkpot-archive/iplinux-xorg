@@ -1,3 +1,10 @@
+xorg (1:7.3+14) asimov; urgency=low
+
+  * Move .xsession-errors to /var/log, $HOME may be on extremely slow
+    sync-ed VFAT volume.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Wed, 22 Jul 2009 22:21:31 +0700
+
 xorg (1:7.3+13) asimov; urgency=low
 
   * Part of Xsession script moved to Xsession.d/04xsession-errors to allow
