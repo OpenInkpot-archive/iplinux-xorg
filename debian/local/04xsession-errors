@@ -1,4 +1,4 @@
-ERRFILE=$HOME/.xsession-errors
+ERRFILE=/var/log/xsession-$USER-errors
 
 if (umask 077 && touch "$ERRFILE") 2> /dev/null && [ -w "$ERRFILE" ] &&
   [ ! -L "$ERRFILE" ]; then

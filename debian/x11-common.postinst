@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+#DEBHELPER#
+
+if [ "$1" = configure ]; then
+  # Remove after 0.2 release:
+  # Deleting old .xsession-errors
+  rm -f /root/.xsession-errors
+fi
